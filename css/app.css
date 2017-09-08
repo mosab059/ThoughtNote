@@ -49,7 +49,7 @@ hr {
   overflow: auto;
 }
 
-/* layouting */
+/* laying out */
 
 .row, .column { display: flex;}
 
