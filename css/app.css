@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background: #ddd;
+  overflow: hidden;
+}
+
+.navbar {
+  height: 2em;
+  padding: 0.5em;
+}
+
+.navbar, input, textarea, .note, .note-list {
+  color: brown;
+  border-radius: 0.5em;
+  margin: 0.5em;
+}
+
+.note { background: yellow; }
+
+input, textarea {
+  padding: 1em;
+  postition: relative;
+  display: block;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+hr {
+  color: lightgrey;
+  opacity: 0.5;
+  margin: 0 1em;
+}
+
+.note-list {
+  width: 15em;
+  overflow: auto;
+}
+
+/* layouting */
+
+.row, .column { display: flex;}
+
+.column { flex-direction: column; }
+
+.flexible { flex: 1; }
