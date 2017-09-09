@@ -1,0 +1,58 @@
+@import "layout.scss";
+
+html, body {
+  @include column;
+  overflow: hidden;
+  height: 100%;
+}
+
+.app {
+  @include flexible;
+  @include row;
+
+  input, textarea, select {
+    padding: 1em;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    overflow: auto;
+  }
+
+  .side {
+    @include column;
+    width: 15em;
+
+    .title { text-align: center; }
+
+    .list {
+      @include flexible;
+      @include row;
+    }
+  }
+
+  .note {
+    @include flexible;
+    @include column;
+    background: yellow;
+    border: 1px solid grey;
+    border-radius: 0.5em;
+    margin: 0.5em;
+
+    #title, #content { color: brown; }
+
+    #title {
+      @include row;
+    }
+
+    hr {
+      color: lightgrey;
+      opacity: 0.5;
+      margin: 0 1em;
+    }
+
+    #content {
+      @include flexible;
+      @include row;
+    }
+  }
+}

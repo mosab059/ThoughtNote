@@ -1,0 +1,12 @@
+@mixin row {
+  display: flex;
+}
+
+@mixin column {
+  @include row;
+  flex-direction: column;
+}
+
+@mixin flexible($flex: 1) {
+  flex: $flex;
+}
