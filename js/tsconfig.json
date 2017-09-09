@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015.iterable"
+    ],
+    "sourceMap": true,
+    "target": "ES5",
+    "typeRoots": [ "../node_modules/@types/" ]
+  }
+}

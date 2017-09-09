@@ -1,9 +1,13 @@
 @import "layout.scss";
 
+$card: yellow;
+$bg: lighten(yellow, 25%);
+
 html, body {
   @include column;
   overflow: hidden;
   height: 100%;
+  background: $bg;
 }
 
 .app {
@@ -24,19 +28,55 @@ html, body {
 
     .title { text-align: center; }
 
-    .list {
+    #list {
       @include flexible;
+      @include column;
+
+      .item {
+        position: relative;
+        display: block;
+        margin: 0.2em auto 0.2em 0;
+        background: red;
+        display: block;
+        text-align: left;
+        padding: 0.2em 1em;
+        color: $bg;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 75%;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+      }
+
+      .item.active {
+        padding-left: 2em;
+        background: darken(red,25%);
+        -webkit-transform-origin: left center;
+                transform-origin: left center;
+      }
+    }
+
+    .buttons {
       @include row;
+      margin: 1em;
+      button {
+        @include flexible;
+        margin: 0.2em;
+      }
     }
   }
 
-  .note {
+  #note {
     @include flexible;
     @include column;
     background: yellow;
     border: 1px solid grey;
     border-radius: 0.5em;
     margin: 0.5em;
+    margin-right: 0;
 
     #title, #content { color: brown; }
 
