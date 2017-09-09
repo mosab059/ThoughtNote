@@ -1,0 +1,17 @@
+html(lang="ar", dir="rtl")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, height=device-height, initial-scale=1")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
+    link(rel="stylesheet", href="css/app.css")
+  body
+    .app
+      .side
+        h1.title مفكرة الأفكار
+        select.list(multiple)
+      .note
+        input#title(type="text", placeholder="عنوان الملاحظة")
+        hr
+        textarea#content(placeholder="محتوى الملاحظة")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="js/app.js")
